@@ -1,0 +1,24 @@
+#!/bin/python3
+
+import os, sys, time, random, colorama
+from colorama import Fore, Back, Style, init
+init(autoreset=True)
+
+def ketik(x):
+	for i in x + "\n":
+		sys.stdout.write(i)
+		sys.stdout.flush()
+		time.sleep(random.random()* 0.04 )
+
+def main():
+	os.system("clear")
+	print(Fore.MAGENTA+"=================================")
+	print(Fore.BLUE+"•\t  "+Back.BLACK+Fore.WHITE+"Github Cloner"+Style.RESET_ALL+Fore.BLUE+"  \t•")
+	print(Fore.BLUE+"•"+Fore.YELLOW+" Author:"+Fore.CYAN+" Rezz Zsh\t\t"+Fore.BLUE+"•")
+	print(Fore.BLUE+"•"+Fore.RED+" Github:"+Style.RESET_ALL+" rezz-zsh\t\t"+Fore.BLUE+"•")
+	print(Fore.MAGENTA+"=================================")
+	url1 = input("[Author Github]: ")
+	url2 = input("[Repository Name]: ")
+	os.system(f"git clone https://github.com/{url1}/{url2}")
+
+main()
